@@ -16,13 +16,13 @@ type REPL struct {
 func NewREPL() *REPL {
 	return &REPL{
 		reader:  bufio.NewReader(os.Stdin),
-		prompt:  "mylang> ",
+		prompt:  "gsi> ",
 		history: make([]string, 0),
 	}
 }
 
 func (r *REPL) Run() error {
-	fmt.Println("Welcome to MyLang REPL (Ctrl+D to exit)")
+	fmt.Println("Welcome to GSI (Ctrl+D to exit)")
 
 	for {
 		fmt.Print(r.prompt)
