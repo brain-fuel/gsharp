@@ -15,12 +15,12 @@ extended_typeclass(unary, unit, [un_op]).
 extended_typeclass(magma, unit, [bin_op]).
 
 extended_typeclass(quasigroup, magma, [divis]).
-extended_typeclass(unital_magma, magma, [id]).
+extended_typeclass(unital_magma, magma, [has_id_elem]).
 extended_typeclass(semigroup, magma, [assoc]).
 
-extended_typeclass(loop, quasigroup, [id]).
+extended_typeclass(loop, quasigroup, [has_id_elem]).
 extended_typeclass(assoc_quasigroup, quasigroup, [assoc]).
-extended_typeclass(monoid, semigroup, [id]).
+extended_typeclass(monoid, semigroup, [has_id_elem]).
 
 extended_typeclass(group, loop, [assoc]).
 
