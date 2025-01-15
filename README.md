@@ -36,6 +36,12 @@ TODO: Look at Winglang strategy.
 
 TODO: figure out syntax for quoting code.
 
-// grammar
+-- grammar
 DOT: '.';
+
+-- Haskell
+fromIntegral
+-- G#
+transform_from Integral
+transform_from String
 ```
