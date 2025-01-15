@@ -21,3 +21,13 @@
 ### Commit Messages
 
 TODO: Look at Winglang strategy.
+
+## Design Decisions
+
+```
+-- comment
+(* multi line comment *)
+(** documentation comment **)
+
+TODO: figure out syntax for quoting code.
+```
