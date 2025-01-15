@@ -1,4 +1,16 @@
-grammar Operators;
+lexer grammar GSharp;
+
+// digits
+fragment DIGIT_DEC: [0-9];
+fragment DIGIT_OCT: [0-7];
+fragment DIGIT_HEX: [0-9] | [a-f] | [A-F];
+
+// algebraic irrational numbers
+fragment PHI: 'phi';
+
+// transcendental numbers
+fragment EULERS_NUM: 'e';
+fragment PI: 'pi';
 
 // Boolean
 
@@ -52,9 +64,9 @@ MULT_SYMB:  '*';
 MULT_WORD:  'multiply';
 DIV_SYMB:   '/';
 DIV_WORD:   'divide';
-MOD_SYMB:   '\/\/\/';
+MOD_SYMB:   '///';
 MOD_WORD:   'mod';
-REM_SYMB:   '\/\/';
+REM_SYMB:   '//';
 REM_WORD:   'rem';
 POW_SYMB:   '^';
 POW_WORD:   'power';
@@ -85,3 +97,7 @@ ARCSINH: 'arcsinh';
 ARCCOSH: 'arccosh';
 ARCTANH: 'arctanh';
 
+// Collections
+
+APPEND_SYMB: '++'
+APPEND_WORD: 'append'

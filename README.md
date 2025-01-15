@@ -30,11 +30,14 @@ TODO: Look at Winglang strategy.
 ## Design Decisions
 
 ```
--- comment
-(* multi line comment *)
-(** documentation comment **)
+#!/usr/bin/env gsharp
+# This is a comment
+# 
+# There is no multiline comment
+### This is a documentation comment.
+### It gets associated with the next piece of actual code in the file.
 
-TODO: figure out syntax for quoting code.
+(* syntaxForQuotingCode this is *)
 
 -- grammar
 DOT: '.';
