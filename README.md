@@ -1,3 +1,8 @@
+## Next Steps
+
+- Finish up v0.1.1 of operators grammar by adding trigonometeric functions and so-on
+- 
+
 ## API Stability
 
 | Level | Label | Stable (Y/N) | Explanation |
@@ -30,4 +35,7 @@ TODO: Look at Winglang strategy.
 (** documentation comment **)
 
 TODO: figure out syntax for quoting code.
+
+// grammar
+DOT: '.';
 ```
