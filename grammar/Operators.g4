@@ -1,4 +1,4 @@
-grammar Operators
+grammar Operators;
 
 // Boolean
 
