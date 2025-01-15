@@ -13,20 +13,20 @@ RIGHT:     'right';
 NOT_LEFT:  '~left';
 NOT_RIGHT: '~right';
 
-AND_SYMB:    '/\';
+AND_SYMB:    '/\\';
 AND_WORD:    'and';
-NAND_SYMB:   '~/\';
+NAND_SYMB:   '~/\\';
 NAND_WORD:    'nand';
 
-OR_SYMBOL:   '\/';
+OR_SYMBOL:   '\\/';
 OR_WORD:     'or';
-NOR_SYMBOL:  '~\/';
+NOR_SYMBOL:  '~\\/';
 NOR_WORD:    'nor';
 
-LEFT_DOUBLE_ARROW:         '<=';  // right implies left
-RIGHT_DOUBLE_ARROW:        '=>';  // left implies right
-STRIKE_LEFT_DOUBLE_ARROW:  '<=/'; // right inhibits left
-STRIKE_RIGHT_DOUBLE_ARROW: '\=>'; // left inhibits right
+LEFT_DOUBLE_ARROW:         '<=';   // right implies left
+RIGHT_DOUBLE_ARROW:        '=>';   // left implies right
+STRIKE_LEFT_DOUBLE_ARROW:  '<=/';  // right inhibits left
+STRIKE_RIGHT_DOUBLE_ARROW: '\\=>'; // left inhibits right
 
 XNOR: '<=>'; // iff
 XOR:  '<~>';
