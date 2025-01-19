@@ -48,6 +48,8 @@ pub fn main() !void {
         const prompt = try writePrompt(&prompt_buf, config, ctx, expr_num, indent_lvl, universe_lvl);
         try stdout.writeAll(prompt);
         var input_buf: [1024]u8 = undefined;
+        // TODO: implement multiple dispatch depending
+        // upon whether or not we're dealing with multiline input
         if (try stdin.readUntilDelimiterOrEof(&input_buf, '\n')) |line| {
             expr_num += 1;
             const evaluated = try evalPrompt(line);
