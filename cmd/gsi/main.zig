@@ -11,7 +11,7 @@ pub fn writePrompt(
     buf: []u8,
     config: PromptConfig,
     ctx: []const u8,
-    line_num: u32,
+    expr_num: u32,
     indent_lvl: u32,
     universe_lvl: u32,
 ) ![]u8 {
@@ -23,7 +23,7 @@ pub fn writePrompt(
             config.prefix,
             ctx,
             universe_lvl,
-            line_num,
+            expr_num,
             indent_lvl,
         }
     );
@@ -38,18 +38,18 @@ pub fn main() !void {
     const stdout = std.io.getStdOut().writer();
 
     var prompt_buf: [max_prompt_len]u8 = undefined;
-    var line_num: u32 = 1;
+    var expr_num: u32 = 1;
     const indent_lvl: u32 = 0;
     const universe_lvl: u32 = 0;
     const ctx = "default";
     const config = PromptConfig{};
 
     while (true) {
-        const prompt = try writePrompt(&prompt_buf, config, ctx, line_num, indent_lvl, universe_lvl);
+        const prompt = try writePrompt(&prompt_buf, config, ctx, expr_num, indent_lvl, universe_lvl);
         try stdout.writeAll(prompt);
         var input_buf: [1024]u8 = undefined;
         if (try stdin.readUntilDelimiterOrEof(&input_buf, '\n')) |line| {
-            line_num += 1;
+            expr_num += 1;
             const evaluated = try evalPrompt(line);
             try stdout.writeAll(evaluated);
             if (0 < evaluated.len) {
