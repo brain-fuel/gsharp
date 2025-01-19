@@ -55,6 +55,8 @@ XOR_WORD: 'xor';
 
 EQ_SYMB: '=';
 EQ_WORD: 'equals';
+CHK_EQ_SYMB: '==';
+CHK_EQ_WORD: 'check_equals'
 NEQ_SYMB: '~=';
 NEQ_WORD: '~equals';
 ADD_SYMB: '+';
